@@ -1,5 +1,7 @@
 import BottomNavigationBar from "@/components/BottomNavigationBar/BottomNavigationBar";
 import {MD3LightTheme, PaperProvider} from 'react-native-paper';
+import AppBarBackAction from "@/components/AppBarBackAction/AppBarBackAction";
+import DividerText from "@/components/Divider/SectionDivider";
 
 const lightBlueTheme = {
     ...MD3LightTheme,
@@ -22,6 +24,8 @@ const lightBlueTheme = {
 export default function HomeScreen() {
     return (
         <PaperProvider theme={lightBlueTheme}>
+            <AppBarBackAction></AppBarBackAction>
+            <DividerText></DividerText>
             <BottomNavigationBar></BottomNavigationBar>
         </PaperProvider>
     );
