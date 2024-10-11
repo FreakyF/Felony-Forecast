@@ -5,42 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0aaa20af-f11d-46d7-8ca9-a04edeedbdb0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Frontend/components/BottomNavigationBar/BottomNavigationBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/(tabs)/_layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/(tabs)/explore.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/+html.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/+not-found.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/_layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/assets/fonts/SpaceMono-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/assets/images/adaptive-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/assets/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/assets/images/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/assets/images/partial-react-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/assets/images/react-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/assets/images/react-logo@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/assets/images/react-logo@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/assets/images/splash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/Collapsible.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/ExternalLink.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/HelloWave.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/ParallaxScrollView.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/ThemedText.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/ThemedView.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/__tests__/ThemedText-test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/__tests__/__snapshots__/ThemedText-test.tsx.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/navigation/TabBarIcon.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/constants/Colors.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/hooks/useColorScheme.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/hooks/useColorScheme.web.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/hooks/useThemeColor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/scripts/reset-project.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,6 +63,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Repos\Felony-Forecast\Frontend\components\BottomNavigationBar" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\app" />
       <recent name="C:\Repos\Felony-Forecast\Frontend" />
     </key>
@@ -103,7 +85,7 @@
       <updated>1728641569768</updated>
       <workItem from="1728641570795" duration="190000" />
       <workItem from="1728641771210" duration="2167000" />
-      <workItem from="1728644655316" duration="324000" />
+      <workItem from="1728644655316" duration="4745000" />
     </task>
     <servers />
   </component>
