@@ -1,14 +1,11 @@
 import {StyleSheet, Text, View} from "react-native";
 
-export default function AppearanceDetails() {
+export default function AppearanceDetails({subText}: Readonly<{ subText?: string }>) {
     return (
         <View style={styles.mainContainer}>
             <Text style={styles.headerText}>Description</Text>
-            {/* TODO: Pass this subText as a prop to display different descriptions for human features. */}
             <Text style={styles.subText}>
-                No data available.{'\n'}
-                Please upload a photo{'\n'}
-                to analyze crime score.
+                {subText ?? 'No data available.\nPlease upload a photo\n to analyze crime score.'}
             </Text>
         </View>
     );

@@ -1,12 +1,11 @@
-import {Image, StyleSheet, View} from "react-native";
+import {StyleSheet, View} from "react-native";
 import AppearanceDetails from "@/components/appearance-details/AppearanceDetails";
+import ProfilePicture from "@/components/profile-picture/ProfilePicture";
 
-export default function AppearanceDetailsHeader() {
+export default function AppearanceOverview() {
     return (
         <View style={styles.mainContainer}>
-            <View style={styles.imageContainer}>
-                <Image style={styles.image} source={require("../../assets/images/Image.png")}></Image>
-            </View>
+            <ProfilePicture></ProfilePicture>
             <AppearanceDetails></AppearanceDetails>
         </View>
     );
@@ -26,12 +25,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: "#FEF7FF"
     },
-    imageContainer: {
-        borderRadius: 28,
-    },
-    image: {
-        width: 150,
-        height: 150,
-        flexShrink: 0,
-    }
+
 })

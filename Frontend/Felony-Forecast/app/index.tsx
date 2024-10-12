@@ -1,10 +1,10 @@
 import {View} from 'react-native';
-import AppearanceDetailsHeader from "@/components/appearance-details-header/AppearanceDetailsHeader";
+import AppearanceOverview from "@/components/appearance-overview/AppearanceOverview";
 
 export default function Index() {
     return (
         <View>
-            <AppearanceDetailsHeader></AppearanceDetailsHeader>
+            <AppearanceOverview></AppearanceOverview>
         </View>
     );
 }
