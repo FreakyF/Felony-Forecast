@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0aaa20af-f11d-46d7-8ca9-a04edeedbdb0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/app/(tabs)/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/assets/images/Image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/description-column/DescriptionColumn.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/AppBarBackAction/AppBarBackAction.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/BottomNavigationBar/BottomNavigationBar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/components/Divider/SectionDivider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/description-column/DescriptionColumn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/description-column/DescriptionColumn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/header/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,11 +70,11 @@
       <recent name="C:\Repos\Felony-Forecast\Frontend\components\Header" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\app" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\assets\images" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\components" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\app\(tabs)" />
-      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\app" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -112,7 +99,7 @@
       <workItem from="1728731908058" duration="6148000" />
       <workItem from="1728751817780" duration="4202000" />
       <workItem from="1728756084956" duration="8358000" />
-      <workItem from="1728764691424" duration="8669000" />
+      <workItem from="1728764691424" duration="8946000" />
     </task>
     <servers />
   </component>

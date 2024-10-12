@@ -3,9 +3,9 @@ import DescriptionColumn from "@/components/description-column/DescriptionColumn
 
 export default function Header() {
     return (
-        <View style={styles.header}>
-            <View>
-                <Image source={require("../../assets/images/Image.png")}></Image>
+        <View style={styles.mainContainer}>
+            <View style={styles.imageContainer}>
+                <Image style={styles.image} source={require("../../assets/images/Image.png")}></Image>
             </View>
             <DescriptionColumn></DescriptionColumn>
         </View>
@@ -13,7 +13,7 @@ export default function Header() {
 }
 
 const styles = StyleSheet.create({
-    header: {
+    mainContainer: {
         display: 'flex',
         flexDirection: 'row',
         flexShrink: 0,
@@ -25,5 +25,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: "#FEF7FF"
+    },
+    imageContainer: {
+        borderRadius: 28,
+    },
+    image: {
+        width: 150,
+        height: 150,
+        flexShrink: 0,
     }
 })

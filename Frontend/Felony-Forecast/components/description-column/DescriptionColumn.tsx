@@ -2,7 +2,7 @@ import {StyleSheet, Text, View} from "react-native";
 
 export default function DescriptionColumn() {
     return (
-        <View style={styles.container}>
+        <View style={styles.mainContainer}>
             <Text style={styles.headerText}>Description</Text>
             <Text style={styles.subText}>
                 No data available.{'\n'}
@@ -14,7 +14,7 @@ export default function DescriptionColumn() {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    mainContainer: {
         display: 'flex',
         flexDirection: 'column',
         flexGrow: 1,
