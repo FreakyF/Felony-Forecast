@@ -8,7 +8,6 @@ export default function ProfilePicture() {
     );
 }
 
-
 const styles = StyleSheet.create({
     imageContainer: {
         borderRadius: 28,

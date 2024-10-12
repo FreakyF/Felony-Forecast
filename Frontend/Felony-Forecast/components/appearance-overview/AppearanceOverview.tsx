@@ -25,5 +25,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: "#FEF7FF"
     },
-
 })
