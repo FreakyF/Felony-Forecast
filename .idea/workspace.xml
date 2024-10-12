@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0aaa20af-f11d-46d7-8ca9-a04edeedbdb0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/components/AppBarBackAction/AppBarBackAction.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/components/Divider/SectionDivider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/app/(tabs)/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/assets/images/Image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/description-column/DescriptionColumn.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/app/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/components/AppBarBackAction/AppBarBackAction.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/components/BottomNavigationBar/BottomNavigationBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/components/Divider/SectionDivider.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +30,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
       </list>
@@ -46,26 +59,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Repos/Felony-Forecast&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Repos\\Felony-Forecast\\Frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Repos/Felony-Forecast/Frontend/Felony-Forecast/app/(tabs)",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Repos\\Felony-Forecast\\Frontend\\Felony-Forecast\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\app\(tabs)" />
+      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\app" />
+      <recent name="C:\Repos\Felony-Forecast\Frontend\components\Header" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Repos\Felony-Forecast\Frontend\components\BottomNavigationBar" />
-      <recent name="C:\Repos\Felony-Forecast\Frontend\app" />
-      <recent name="C:\Repos\Felony-Forecast\Frontend" />
+      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\assets\images" />
+      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\components" />
+      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast" />
+      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\app\(tabs)" />
+      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\app" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -85,7 +107,12 @@
       <updated>1728641569768</updated>
       <workItem from="1728641570795" duration="190000" />
       <workItem from="1728641771210" duration="2167000" />
-      <workItem from="1728644655316" duration="9626000" />
+      <workItem from="1728644655316" duration="10379000" />
+      <workItem from="1728679293421" duration="163000" />
+      <workItem from="1728731908058" duration="6148000" />
+      <workItem from="1728751817780" duration="4202000" />
+      <workItem from="1728756084956" duration="8358000" />
+      <workItem from="1728764691424" duration="8669000" />
     </task>
     <servers />
   </component>
