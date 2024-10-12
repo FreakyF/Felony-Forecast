@@ -1,9 +1,10 @@
 import {StyleSheet, Text, View} from "react-native";
 
-export default function DescriptionColumn() {
+export default function AppearanceDetails() {
     return (
         <View style={styles.mainContainer}>
             <Text style={styles.headerText}>Description</Text>
+            {/* TODO: Pass this subText as a prop to display different descriptions for human features. */}
             <Text style={styles.subText}>
                 No data available.{'\n'}
                 Please upload a photo{'\n'}

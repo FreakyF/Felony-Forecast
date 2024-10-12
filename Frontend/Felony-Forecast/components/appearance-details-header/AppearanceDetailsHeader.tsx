@@ -1,13 +1,13 @@
 import {Image, StyleSheet, View} from "react-native";
-import DescriptionColumn from "@/components/description-column/DescriptionColumn";
+import AppearanceDetails from "@/components/appearance-details/AppearanceDetails";
 
-export default function Header() {
+export default function AppearanceDetailsHeader() {
     return (
         <View style={styles.mainContainer}>
             <View style={styles.imageContainer}>
                 <Image style={styles.image} source={require("../../assets/images/Image.png")}></Image>
             </View>
-            <DescriptionColumn></DescriptionColumn>
+            <AppearanceDetails></AppearanceDetails>
         </View>
     );
 }
