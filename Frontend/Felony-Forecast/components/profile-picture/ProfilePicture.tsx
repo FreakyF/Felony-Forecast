@@ -2,14 +2,14 @@ import {Image, StyleSheet, View} from "react-native";
 
 export default function ProfilePicture() {
     return (
-        <View style={styles.imageContainer}>
+        <View style={styles.mainContainer}>
             <Image style={styles.image} source={require("../../assets/images/Image.png")}></Image>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    imageContainer: {
+    mainContainer: {
         borderRadius: 28,
     },
     image: {

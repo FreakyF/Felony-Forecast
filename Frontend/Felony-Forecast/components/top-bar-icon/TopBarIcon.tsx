@@ -3,7 +3,7 @@ import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 export default function TopBarIcon({iconName}: Readonly<{ iconName: keyof typeof Icon.glyphMap }>) {
     return (
-        <View style={styles.iconContainer}>
+        <View style={styles.mainContainer}>
             <TouchableOpacity onPress={() => {
 
             }}>
@@ -13,7 +13,7 @@ export default function TopBarIcon({iconName}: Readonly<{ iconName: keyof typeof
     );
 }
 const styles = StyleSheet.create({
-    iconContainer: {
+    mainContainer: {
         display: 'flex',
         flexDirection: 'column',
         flexShrink: 0,
