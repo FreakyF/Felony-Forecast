@@ -1,21 +1,12 @@
-import {StyleSheet, Text, View} from "react-native";
-import Icon from "@expo/vector-icons/MaterialCommunityIcons";
+import {StyleSheet, View} from "react-native";
+import BottomBarButton from "@/components/bottom-bar-button/BottomBarButton";
 
 export default function BottomAppBar() {
     return (
         <View style={styles.mainContainer}>
-            <View style={styles.navItem}>
-                <Icon name="arrow-left" size={24} color={"#44464F"}/>
-                <Text>Previous person</Text>
-            </View>
-            <View style={styles.navItem}>
-                <Icon name="camera-iris" size={24} color={"#44464F"}/>
-                <Text>Take a photo</Text>
-            </View>
-            <View style={styles.navItem}>
-                <Icon name="arrow-right" size={24} color={"#44464F"}/>
-                <Text>Next person</Text>
-            </View>
+            <BottomBarButton text={"Previous person"} iconName={"arrow-left"}></BottomBarButton>
+            <BottomBarButton text={"Take a photo"} iconName={"camera-iris"}></BottomBarButton>
+            <BottomBarButton text={"Next person"} iconName={"arrow-right"}></BottomBarButton>
         </View>
     );
 }
@@ -31,18 +22,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#F3EDF7',
     },
-    navItem: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingTop: 12,
-        paddingBottom: 16,
-        paddingHorizontal: 0,
-        gap: 4,
-        flexGrow: 1,
-        flexShrink: 0,
-        flexBasis: 0,
-        backgroundColor: 'pink'
-    }
 })

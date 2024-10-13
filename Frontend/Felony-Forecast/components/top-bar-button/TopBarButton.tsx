@@ -1,7 +1,7 @@
 import {StyleSheet, TouchableOpacity, View} from "react-native";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
-export default function TopBarIcon({iconName}: Readonly<{ iconName: keyof typeof Icon.glyphMap }>) {
+export default function TopBarButton({iconName}: Readonly<{ iconName: keyof typeof Icon.glyphMap }>) {
     return (
         <View style={styles.mainContainer}>
             <TouchableOpacity onPress={() => {

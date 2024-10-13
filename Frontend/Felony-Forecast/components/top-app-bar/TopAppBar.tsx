@@ -1,12 +1,12 @@
 import {StyleSheet, Text, View} from "react-native";
-import TopBarIcon from "@/components/top-bar-icon/TopBarIcon";
+import TopBarButton from "@/components/top-bar-button/TopBarButton";
 
 export default function TopAppBar({title}: Readonly<{ title: string }>) {
     return (
         <View style={styles.mainContainer}>
-            <TopBarIcon iconName={"arrow-u-left-top"}></TopBarIcon>
+            <TopBarButton iconName={"arrow-u-left-top"}></TopBarButton>
             <Text style={styles.title}>{title}</Text>
-            <TopBarIcon iconName={"dots-vertical"}></TopBarIcon>
+            <TopBarButton iconName={"dots-vertical"}></TopBarButton>
         </View>
     );
 }
