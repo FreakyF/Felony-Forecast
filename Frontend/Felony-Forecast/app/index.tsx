@@ -5,7 +5,7 @@ import TopAppBar from "@/components/top-app-bar/TopAppBar";
 export default function Index() {
     return (
         <View>
-            <TopAppBar></TopAppBar>
+            <TopAppBar title={"Felony Forecast"}></TopAppBar>
             <AppearanceOverview></AppearanceOverview>
         </View>
     );
