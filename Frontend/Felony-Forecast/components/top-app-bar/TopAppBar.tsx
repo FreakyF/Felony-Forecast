@@ -1,16 +1,12 @@
 import {StyleSheet, Text, View} from "react-native";
-import Icon from "@expo/vector-icons/MaterialCommunityIcons";
+import TopBarIcon from "@/components/top-bar-icon/TopBarIcon";
 
 export default function TopAppBar({title}: Readonly<{ title: string }>) {
     return (
         <View style={styles.mainContainer}>
-            <View style={styles.iconContainer}>
-                <Icon name="arrow-u-left-top" size={24} color={"#44464F"}/>
-            </View>
+            <TopBarIcon iconName={"arrow-u-left-top"}></TopBarIcon>
             <Text style={styles.title}>{title}</Text>
-            <View style={styles.iconContainer}>
-                <Icon name="dots-vertical" size={24}/>
-            </View>
+            <TopBarIcon iconName={"dots-vertical"}></TopBarIcon>
         </View>
     );
 }
@@ -28,15 +24,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: '#FAF8FF'
-    },
-    iconContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        flexShrink: 0,
-        width: 48,
-        height: 48,
-        alignItems: 'center',
-        justifyContent: 'center',
     },
     title: {
         color: '#1D1B20',

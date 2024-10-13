@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0aaa20af-f11d-46d7-8ca9-a04edeedbdb0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-app-bar/BottomAppBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/top-app-bar/TopAppBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/top-app-bar/TopAppBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/top-bar-icon/TopBarIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/top-bar-icon/TopBarIcon.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +58,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Repos\\Felony-Forecast\\Frontend\\Felony-Forecast\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -70,11 +71,11 @@
       <recent name="C:\Repos\Felony-Forecast\Frontend\components\Header" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\components\top-bar-icon" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\app" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\assets\images" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\components" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast" />
-      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\app\(tabs)" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -100,6 +101,9 @@
       <workItem from="1728751817780" duration="4202000" />
       <workItem from="1728756084956" duration="8358000" />
       <workItem from="1728764691424" duration="11207000" />
+      <workItem from="1728814866490" duration="768000" />
+      <workItem from="1728815892601" duration="5259000" />
+      <workItem from="1728821688584" duration="466000" />
     </task>
     <servers />
   </component>
