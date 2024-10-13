@@ -1,14 +1,15 @@
 import {StyleSheet, Text, View} from "react-native";
+import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 export default function TopAppBar({title}: Readonly<{ title: string }>) {
     return (
         <View style={styles.mainContainer}>
             <View style={styles.iconContainer}>
-                <Text>Back</Text>
+                <Icon name="arrow-u-left-top" size={24} color={"#44464F"}/>
             </View>
-            <Text>{title}</Text>
+            <Text style={styles.title}>{title}</Text>
             <View style={styles.iconContainer}>
-                <Text>Settings</Text>
+                <Icon name="dots-vertical" size={24}/>
             </View>
         </View>
     );
@@ -28,12 +29,23 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         backgroundColor: '#FAF8FF'
     },
-    iconContainer: { // TODO: Change css to the figma's one.
+    iconContainer: {
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        flexShrink: 0,
         width: 48,
         height: 48,
-        backgroundColor: "orange",
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    title: {
+        color: '#1D1B20',
+        textAlign: 'center',
+        fontFamily: 'Roboto',
+        fontSize: 22,
+        fontStyle: 'normal',
+        fontWeight: '400',
+        lineHeight: 28,
+        letterSpacing: 0,
     }
 })
