@@ -6,16 +6,14 @@ export default function BottomBarButton({iconName, text}: Readonly<{
     text: string
 }>) {
     return (
-        <View style={styles.mainContainer}>
-            <TouchableOpacity onPress={() => {
+        <TouchableOpacity style={styles.mainContainer} onPress={() => {
 
-            }}>
-                <View style={styles.iconContainer}>
-                    <Icon name={iconName} size={24} color={"#44464F"}/>
-                </View>
-                <Text style={styles.iconText}>{text}</Text>
-            </TouchableOpacity>
-        </View>
+        }}>
+            <View style={styles.iconContainer}>
+                <Icon name={iconName} size={24} color={"#44464F"}/>
+            </View>
+            <Text style={styles.iconText}>{text}</Text>
+        </TouchableOpacity>
     );
 }
 const styles = StyleSheet.create({

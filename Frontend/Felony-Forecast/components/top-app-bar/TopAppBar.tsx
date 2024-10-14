@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         gap: 6,
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: '#FAF8FF'
+        backgroundColor: '#FEF7FF'
     },
     title: {
         color: '#1D1B20',
