@@ -10,28 +10,29 @@ export default function HorizontalDivider({subText}: Readonly<{ subText: string 
 }
 const styles = StyleSheet.create({
     mainContainer: {
+        display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
+        flexShrink: 0,
         width: 412,
         height: 53,
-        paddingHorizontal: 15.5,
         gap: 4,
-        flexShrink: 0,
+        paddingHorizontal: 15.5,
         backgroundColor: '#FEF7FF'
     },
     dividerContainer: {
-        backgroundColor: '#CAC4D0',
         height: 1,
-        width: 381
+        width: 381,
+        backgroundColor: '#CAC4D0'
     },
     subText: {
-        color: '#49454F',
         fontFamily: 'Roboto',
         fontSize: 28,
         fontStyle: 'normal',
         fontWeight: '400',
         lineHeight: 36,
         letterSpacing: 0,
+        color: '#49454F',
     }
 })
