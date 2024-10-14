@@ -5,7 +5,7 @@ export default function AppearanceDetails({subText}: Readonly<{ subText?: string
         <View style={styles.mainContainer}>
             <Text style={styles.headerText}>Description</Text>
             <Text style={styles.subText}>
-                {subText ?? 'No data available.\nPlease upload a photo\n to analyze crime score.'}
+                {subText ?? 'No data available.\nPlease upload a photo\nto analyze crime score.'}
             </Text>
         </View>
     );
