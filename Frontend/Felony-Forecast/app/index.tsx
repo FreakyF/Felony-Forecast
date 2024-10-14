@@ -4,6 +4,7 @@ import TopAppBar from "@/components/top-app-bar/TopAppBar";
 import BottomAppBar from "@/components/bottom-app-bar/BottomAppBar";
 import HorizontalDivider from "@/components/horizontal-divider/HorizontalDivider";
 import DataSection from "@/components/data-section/DataSection";
+import PopupNotification from "@/components/popup-notification/PopupNotification";
 
 export default function Index() {
     return (
@@ -11,6 +12,8 @@ export default function Index() {
             <TopAppBar title={"Felony Forecast"}/>
             <AppearanceOverview/>
             <HorizontalDivider subText={"Crime Score"}/>
+            <PopupNotification iconName={"information-outline"}
+                               text={"There is only one person in the photo!"}></PopupNotification>
             <DataSection/>
             <BottomAppBar/>
         </View>

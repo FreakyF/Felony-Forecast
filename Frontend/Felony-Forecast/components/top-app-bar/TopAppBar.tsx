@@ -27,12 +27,12 @@ const styles = StyleSheet.create({
     },
     title: {
         color: '#1D1B20',
-        textAlign: 'center',
         fontFamily: 'Roboto',
         fontSize: 22,
         fontStyle: 'normal',
         fontWeight: '400',
         lineHeight: 28,
         letterSpacing: 0,
+        textAlign: 'center',
     }
 })
