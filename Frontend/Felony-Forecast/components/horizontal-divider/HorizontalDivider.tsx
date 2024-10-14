@@ -12,13 +12,13 @@ const styles = StyleSheet.create({
     mainContainer: {
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'flex-start',
         flexShrink: 0,
         width: 412,
         height: 53,
         paddingHorizontal: 15.5,
         gap: 4,
+        alignItems: 'flex-start',
+        justifyContent: 'center',
         backgroundColor: '#FAF8FF'
     },
     dividerContainer: {
