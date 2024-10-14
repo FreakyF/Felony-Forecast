@@ -7,12 +7,6 @@
     <list default="true" id="0aaa20af-f11d-46d7-8ca9-a04edeedbdb0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/appearance-overview/AppearanceOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/appearance-overview/AppearanceOverview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-app-bar/BottomAppBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-app-bar/BottomAppBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-bar-button/BottomBarButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-bar-button/BottomBarButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/data-section/DataSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/data-section/DataSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/horizontal-divider/HorizontalDivider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/horizontal-divider/HorizontalDivider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/profile-picture/ProfilePicture.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/profile-picture/ProfilePicture.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/top-app-bar/TopAppBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/top-app-bar/TopAppBar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +104,7 @@
       <workItem from="1728815892601" duration="5259000" />
       <workItem from="1728821688584" duration="5495000" />
       <workItem from="1728915903864" duration="426000" />
-      <workItem from="1728921269081" duration="3820000" />
+      <workItem from="1728921269081" duration="4287000" />
     </task>
     <servers />
   </component>

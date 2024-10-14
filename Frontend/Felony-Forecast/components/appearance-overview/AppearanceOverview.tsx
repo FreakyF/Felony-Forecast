@@ -5,8 +5,10 @@ import ProfilePicture from "@/components/profile-picture/ProfilePicture";
 export default function AppearanceOverview() {
     return (
         <View style={styles.mainContainer}>
-            <ProfilePicture></ProfilePicture>
-            <AppearanceDetails></AppearanceDetails>
+            <ProfilePicture/>
+            <View style={styles.detailsContainer}>
+                <AppearanceDetails/>
+            </View>
         </View>
     );
 }
@@ -21,8 +23,12 @@ const styles = StyleSheet.create({
         paddingVertical: 8,
         paddingHorizontal: 16,
         gap: 24,
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'center',
         backgroundColor: "#FAF8FF"
     },
-})
+    detailsContainer: {
+        justifyContent: 'flex-start',
+        flexGrow: 1,
+    },
+});
