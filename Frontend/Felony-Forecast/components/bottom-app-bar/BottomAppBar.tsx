@@ -20,6 +20,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8,
         alignItems: 'flex-start',
         justifyContent: 'center',
-        backgroundColor: '#F3EDF7',
+        backgroundColor: '#EEEDF4',
     },
 })

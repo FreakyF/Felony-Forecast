@@ -15,6 +15,6 @@ const styles = StyleSheet.create({
         height: 53,
         gap: 4,
         paddingHorizontal: 15.5,
-        backgroundColor: '#FEF7FF'
+        backgroundColor: '#FAF8FF'
     },
 })

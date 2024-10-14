@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
         borderRadius: 28,
     },
     image: {
+        flexShrink: 0,
         width: 150,
         height: 150,
-        flexShrink: 0,
     }
 })

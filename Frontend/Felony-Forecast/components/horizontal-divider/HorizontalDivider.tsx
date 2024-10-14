@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
         flexShrink: 0,
         width: 412,
         height: 53,
-        gap: 4,
         paddingHorizontal: 15.5,
-        backgroundColor: '#FEF7FF'
+        gap: 4,
+        backgroundColor: '#FAF8FF'
     },
     dividerContainer: {
         height: 1,

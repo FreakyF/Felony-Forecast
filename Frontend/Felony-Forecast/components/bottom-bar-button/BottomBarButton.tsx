@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
     },
     iconContainer: {
         alignItems: 'center',
-        color: '#49454F',
         paddingBottom: 8,
+        color: '#49454F',
     },
     iconText: {
         fontFamily: 'Roboto',
