@@ -1,14 +1,13 @@
 import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
-export default function BottomBarButton({iconName, text}: Readonly<{
+export default function BottomBarButton({iconName, text, onPress}: Readonly<{
     iconName: keyof typeof Icon.glyphMap;
-    text: string
+    text: string;
+    onPress: () => void
 }>) {
     return (
-        <TouchableOpacity style={styles.mainContainer} onPress={() => {
-
-        }}>
+        <TouchableOpacity style={styles.mainContainer} onPress={onPress}>
             <View style={styles.iconContainer}>
                 <Icon name={iconName} size={24} color={"#44464F"}/>
             </View>
