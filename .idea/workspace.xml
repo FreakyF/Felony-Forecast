@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0aaa20af-f11d-46d7-8ca9-a04edeedbdb0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-app-bar/BottomAppBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-app-bar/BottomAppBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-bar-button/BottomBarButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-bar-button/BottomBarButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/profile-picture/ProfilePicture.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/profile-picture/ProfilePicture.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +110,7 @@
       <workItem from="1729011973861" duration="140000" />
       <workItem from="1729012333461" duration="631000" />
       <workItem from="1729013047263" duration="175000" />
-      <workItem from="1729021480617" duration="739000" />
+      <workItem from="1729021480617" duration="1128000" />
     </task>
     <servers />
   </component>
