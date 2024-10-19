@@ -16,6 +16,7 @@ export default function BottomAppBar({onNext, onPrevious}: Readonly<{ onNext: ()
         iconName: keyof typeof Icon.glyphMap;
         text: string;
     } | null>(null);
+    const [crimeData, setCrimeData] = useState<any>(null);
 
     const requestCameraPermission = async () => {
         const permissionResult = await ImagePicker.requestCameraPermissionsAsync();
@@ -57,15 +58,16 @@ export default function BottomAppBar({onNext, onPrevious}: Readonly<{ onNext: ()
 
             const payload = {
                 image: base64Image,
-                fileName: photo.fileName ?? 'photo.jpg',
-                mimeType: photo.type ?? 'image/jpeg',
             };
 
-            const response = await sendToBackend('backend', payload);
-            if (!response.success) {
-                setNotification({iconName: "alert-circle-outline", text: "Failed to upload image!"});
+            const response = await sendToBackend('http://10.0.2.2:8000/receive_data', payload);
+
+            if (response.success && response.data) {
+                console.log(response.data);
+                setCrimeData(response.data);
+                navigation.navigate('Felon', {crimeData: response.data});
             } else {
-                navigation.navigate('Felon');
+                setNotification({iconName: "alert-circle-outline", text: "Failed to upload image!"});
             }
         }
     };
