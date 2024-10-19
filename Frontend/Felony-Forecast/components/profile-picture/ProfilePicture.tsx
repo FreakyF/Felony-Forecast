@@ -1,44 +1,21 @@
-import React, {useState} from "react";
-import {Alert, Image, StyleSheet, TouchableOpacity} from "react-native";
-import * as ImagePicker from 'expo-image-picker';
+import React from "react";
+import {Image, StyleSheet, View} from "react-native";
 
-export default function ProfilePicture() {
-    const [hasMediaLibraryPermission, setHasMediaLibraryPermission] = useState<boolean | null>(null);
-
-    const requestMediaLibraryPermission = async () => {
-        const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
-        setHasMediaLibraryPermission(permissionResult.granted);
-        return permissionResult.granted;
-    };
-
-    const pickImage = async () => {
-        if (hasMediaLibraryPermission === null) {
-            const granted = await requestMediaLibraryPermission();
-            if (!granted) {
-                Alert.alert("Permission to access the media library is required!");
-                return;
-            }
-        } else if (!hasMediaLibraryPermission) {
-            const granted = await requestMediaLibraryPermission();
-            if (!granted) {
-                Alert.alert("Permission to access the media library is required!");
-                return;
-            }
-        }
-
-        const result = await ImagePicker.launchImageLibraryAsync();
-
-        if (result.canceled) {
-            // Handle cancellation logic.
-        } else {
-            // Handle successful photo selected logic.
-        }
-    };
-
+export default function ProfilePicture({image}: Readonly<{ image?: string }>) {
     return (
-        <TouchableOpacity onPress={pickImage} style={styles.mainContainer}>
-            <Image style={styles.image} source={require("../../assets/images/Image.png")}/>
-        </TouchableOpacity>
+        <View style={styles.mainContainer}>
+            {image ? (
+                <Image
+                    style={styles.image}
+                    source={{uri: image}}
+                />
+            ) : (
+                <Image
+                    style={styles.image}
+                    source={require("../../assets/images/Image.png")}
+                />
+            )}
+        </View>
     );
 }
 
@@ -50,5 +27,6 @@ const styles = StyleSheet.create({
         flexShrink: 0,
         width: 150,
         height: 150,
+        borderRadius: 28,
     },
 });

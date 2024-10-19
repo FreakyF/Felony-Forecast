@@ -2,12 +2,12 @@ import {StyleSheet, View} from "react-native";
 import AppearanceDetails from "@/components/appearance-details/AppearanceDetails";
 import ProfilePicture from "@/components/profile-picture/ProfilePicture";
 
-export default function AppearanceOverview() {
+export default function AppearanceOverview({subText, image}: Readonly<{ subText?: string; image?: string }>) {
     return (
         <View style={styles.mainContainer}>
-            <ProfilePicture/>
+            <ProfilePicture image={image}/>
             <View style={styles.detailsContainer}>
-                <AppearanceDetails/>
+                <AppearanceDetails subText={subText}/>
             </View>
         </View>
     );

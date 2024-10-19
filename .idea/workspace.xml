@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0aaa20af-f11d-46d7-8ca9-a04edeedbdb0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/api/Api.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/screens/FelonScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/screens/HomeScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/appearance-overview/AppearanceOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/appearance-overview/AppearanceOverview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-app-bar/BottomAppBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/bottom-app-bar/BottomAppBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/profile-picture/ProfilePicture.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/profile-picture/ProfilePicture.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/top-app-bar/TopAppBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/top-app-bar/TopAppBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/top-bar-button/TopBarButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/components/top-bar-button/TopBarButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Felony-Forecast/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Felony-Forecast/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +60,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Repos/Felony-Forecast/Frontend/Felony-Forecast/app/(tabs)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Repos/Demo-Obd-II&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -70,11 +80,11 @@
       <recent name="C:\Repos\Felony-Forecast\Frontend\components\Header" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\api" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\components\top-bar-icon" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\app" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\assets\images" />
       <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast\components" />
-      <recent name="C:\Repos\Felony-Forecast\Frontend\Felony-Forecast" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -110,11 +120,24 @@
       <workItem from="1729011973861" duration="140000" />
       <workItem from="1729012333461" duration="631000" />
       <workItem from="1729013047263" duration="175000" />
-      <workItem from="1729021480617" duration="1128000" />
+      <workItem from="1729021480617" duration="1172000" />
+      <workItem from="1729083706004" duration="89000" />
+      <workItem from="1729336000177" duration="25390000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,12 +1,19 @@
 import {StyleSheet, Text, View} from "react-native";
 import TopBarButton from "@/components/top-bar-button/TopBarButton";
+import {ParamListBase, useNavigation} from "@react-navigation/native";
+import {NativeStackNavigationProp} from "@react-navigation/native-stack";
 
 export default function TopAppBar({title}: Readonly<{ title: string }>) {
+    const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
     return (
         <View style={styles.mainContainer}>
-            <TopBarButton iconName={"arrow-u-left-top"}></TopBarButton>
+            <TopBarButton iconName={"arrow-u-left-top"}
+                          onPress={() => navigation.goBack()}></TopBarButton>
             <Text style={styles.title}>{title}</Text>
-            <TopBarButton iconName={"dots-vertical"}></TopBarButton>
+            <View style={styles.emptyContainer}>
+
+            </View>
         </View>
     );
 }
@@ -24,6 +31,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: '#FAF8FF'
+    },
+    emptyContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        flexShrink: 0,
+        width: 48,
+        height: 48,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     title: {
         color: '#1D1B20',

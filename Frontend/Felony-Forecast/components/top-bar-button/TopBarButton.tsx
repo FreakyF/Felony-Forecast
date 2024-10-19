@@ -1,12 +1,13 @@
 import {StyleSheet, TouchableOpacity, View} from "react-native";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
-export default function TopBarButton({iconName}: Readonly<{ iconName: keyof typeof Icon.glyphMap }>) {
+export default function TopBarButton({iconName, onPress}: Readonly<{
+    iconName: keyof typeof Icon.glyphMap,
+    onPress: () => void
+}>) {
     return (
         <View style={styles.mainContainer}>
-            <TouchableOpacity onPress={() => {
-
-            }}>
+            <TouchableOpacity onPress={onPress}>
                 <Icon name={iconName} size={24} color={"#44464F"}/>
             </TouchableOpacity>
         </View>

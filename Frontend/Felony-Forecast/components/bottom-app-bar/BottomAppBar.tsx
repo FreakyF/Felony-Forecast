@@ -1,10 +1,21 @@
 import React, {useState} from "react";
-import {Alert, StyleSheet, View} from "react-native";
+import {StyleSheet, View} from "react-native";
 import * as ImagePicker from 'expo-image-picker';
 import BottomBarButton from "@/components/bottom-bar-button/BottomBarButton";
+import * as FileSystem from 'expo-file-system';
+import {sendToBackend} from '@/api/Api';
+import PopupNotification from '@/components/popup-notification/PopupNotification';
+import Icon from "@expo/vector-icons/MaterialCommunityIcons";
+import {ParamListBase, useNavigation} from "@react-navigation/native";
+import {NativeStackNavigationProp} from "@react-navigation/native-stack";
 
-export default function BottomAppBar() {
+export default function BottomAppBar({onNext, onPrevious}: Readonly<{ onNext: () => void, onPrevious: () => void }>) {
+    const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
     const [hasCameraPermission, setHasCameraPermission] = useState<boolean | null>(null);
+    const [notification, setNotification] = useState<{
+        iconName: keyof typeof Icon.glyphMap;
+        text: string;
+    } | null>(null);
 
     const requestCameraPermission = async () => {
         const permissionResult = await ImagePicker.requestCameraPermissionsAsync();
@@ -12,27 +23,50 @@ export default function BottomAppBar() {
         return permissionResult.granted;
     };
 
+    const clearNotification = () => {
+        setNotification(null);
+    };
+
     const takePhoto = async () => {
-        if (hasCameraPermission === null) {
+        clearNotification();
+
+        if (hasCameraPermission === null || !hasCameraPermission) {
             const granted = await requestCameraPermission();
             if (!granted) {
-                Alert.alert("Camera permission is required to take a photo.");
-                return;
-            }
-        } else if (!hasCameraPermission) {
-            const granted = await requestCameraPermission();
-            if (!granted) {
-                Alert.alert("Camera permission is required to take a photo.");
+                setNotification({
+                    iconName: "alert-circle-outline",
+                    text: "Camera permission is required to take a photo!"
+                });
                 return;
             }
         }
 
-        const result = await ImagePicker.launchCameraAsync();
+        const result = await ImagePicker.launchCameraAsync({
+            base64: true,
+        });
 
         if (result.canceled) {
-            // Handle cancellation logic.
+            return;
         } else {
-            // Handle successful photo taken logic.
+            const photo = result.assets[0];
+            const fileUri = photo.uri;
+
+            const base64Image = await FileSystem.readAsStringAsync(fileUri, {
+                encoding: FileSystem.EncodingType.Base64,
+            });
+
+            const payload = {
+                image: base64Image,
+                fileName: photo.fileName ?? 'photo.jpg',
+                mimeType: photo.type ?? 'image/jpeg',
+            };
+
+            const response = await sendToBackend('backend', payload);
+            if (!response.success) {
+                setNotification({iconName: "alert-circle-outline", text: "Failed to upload image!"});
+            } else {
+                navigation.navigate('Felon');
+            }
         }
     };
 
@@ -41,7 +75,7 @@ export default function BottomAppBar() {
             <BottomBarButton
                 text={"Previous person"}
                 iconName={"arrow-left"}
-                onPress={() => console.log("Previous person button pressed")}
+                onPress={onPrevious}
             />
             <BottomBarButton
                 text={"Take a photo"}
@@ -51,8 +85,14 @@ export default function BottomAppBar() {
             <BottomBarButton
                 text={"Next person"}
                 iconName={"arrow-right"}
-                onPress={() => console.log("Next person button pressed")}
+                onPress={onNext}
             />
+            {notification && (
+                <PopupNotification
+                    iconName={notification.iconName}
+                    text={notification.text}
+                />
+            )}
         </View>
     );
 }
