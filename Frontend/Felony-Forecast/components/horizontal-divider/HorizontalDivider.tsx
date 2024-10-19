@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         flexShrink: 0,
-        width: 412,
+        width: '100%',
         height: 53,
         paddingHorizontal: 15.5,
         gap: 4,
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     },
     dividerContainer: {
         height: 1,
-        width: 381,
+        width: '100%',
         backgroundColor: '#CAC4D0'
     },
     subText: {

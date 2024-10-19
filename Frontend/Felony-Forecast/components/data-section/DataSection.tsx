@@ -23,7 +23,7 @@ export default function DataSection({crimeList = []}: Readonly<{
 const styles = StyleSheet.create({
     mainContainer: {
         flexGrow: 1,
-        width: 412,
+        width: '100%',
         gap: 4,
         paddingHorizontal: 15.5,
         backgroundColor: '#FAF8FF'

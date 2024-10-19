@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     mainContainer: {
         display: 'flex',
         flexDirection: 'row',
-        width: 412,
+        width: '100%',
         gap: 8,
         paddingVertical: 0,
         paddingHorizontal: 8,

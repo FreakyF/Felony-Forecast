@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         flexShrink: 0,
-        width: 412,
+        width: '100%',
         height: 73,
         paddingVertical: 8,
         paddingHorizontal: 4,
