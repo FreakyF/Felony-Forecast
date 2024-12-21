@@ -1,3 +1,6 @@
+import cv2
+import tensorflow as tf
+import numpy as np
 import base64
 
 
@@ -42,11 +45,80 @@ class Person():
 
 
 class Model():
-    def analyzeImage(self):
-        return [Person("male", 128, 129, "Black", "Black", "Asian", {"dui": 0.7, "theft": 0.3},
-                       'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAIAAADTED8xAAADMElEQVR4nOzVwQnAIBQFQYXff81RUkQCOyDj1YOPnbXWPmeTRef+/3O/OyBjzh3CD95BfqICMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMO0TAAD//2Anhf4QtqobAAAAAElFTkSuQmCC'),
-                Person("female", 321, 456, "Black", "Black", "Asian", {"murder": 0.4, "theft": 0.2},
-                       'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAIAAADTED8xAAADMElEQVR4nOzVwQnAIBQFQYXff81RUkQCOyDj1YOPnbXWPmeTRef+/3O/OyBjzh3CD95BfqICMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMK0CMO0TAAD//2Anhf4QtqobAAAAAElFTkSuQmCC')]
+    def __init__(self):
+        self.faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
+        self.sexModel = tf.keras.models.load_model('models/sex.keras')
+        self.hairModel = tf.keras.models.load_model('models/hair.keras')
+        self.eyesModel = tf.keras.models.load_model('models/eyes.keras')
+        self.raceModel = tf.keras.models.load_model('models/race.keras')
+        self.heightModel = tf.keras.models.load_model('models/height.keras')
+        self.weightModel = tf.keras.models.load_model('models/weight.keras')
+        self.offenseModel = tf.keras.models.load_model('models/offense.keras')
 
-test = Model()
+        self.sexLabels = ['Male', 'Female']
+        self.hairLabels = ['Brown', 'Red', 'Gray', 'Black', 'Bald', 'Blonde']
+        self.eyesLabels = ['Blue', 'Brown', 'Black', 'Hazel', 'Green']
+        self.raceLabels = ['White', 'Black', 'Hispanic']
+        self.heightCalc = lambda x: (x * 27.939999999999998) + 162.56
+        self.weightCalc = lambda x: (x * 54.43000000000001) + 63.5
+        self.offenseLabels = ['BATTERY', 'BURGLARY', 'DUI', 'MANUF/DEL NARCOTICS', 'MURDER', 'None', 'POSS NARCOTICS',
+                              'ROBBERY', 'THEFT', 'UNLWFL POSS FIREARM']
+
+    def analyzeImage(self, base64_provided_image):
+        image_data = base64.b64decode(base64_provided_image)
+        np_array = np.frombuffer(image_data, np.uint8)
+        image = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+        faces = self.faceCascade.detectMultiScale(
+            gray,
+            scaleFactor=1.1,
+            minNeighbors=5,
+            minSize=(80, 80)
+        )
+
+        ret = []
+
+        if len(faces) == 0:
+            return ret
+
+        for (x, y, w, h) in faces:
+            cropped = image[y:y + h, x:x + w]
+            resized = cropped
+
+            if h < 64:
+                resized = cv2.resize(cropped, (64, 64), cv2.INTER_CUBIC)
+            elif h > 64:
+                resized = cv2.resize(cropped, (64, 64), cv2.INTER_AREA)
+
+            input = tf.cast(resized, tf.float32) / 255.0
+            input = tf.image.resize_with_crop_or_pad(input, 64, 64)
+            input = tf.expand_dims(input, axis=0)
+
+            sexPredictions = self.sexModel(input).numpy().tolist()[0]
+            hairPredictions = self.hairModel(input).numpy().tolist()[0]
+            eyesPredictions = self.eyesModel(input).numpy().tolist()[0]
+            racePredictions = self.raceModel(input).numpy().tolist()[0]
+            heightPredictions = self.heightModel(input).numpy().tolist()[0][0]
+            weightPredictions = self.weightModel(input).numpy().tolist()[0][0]
+            offensePredictions = self.offenseModel(input).numpy().tolist()[0]
+
+            sex = dict(zip(self.sexLabels, sexPredictions))
+            sex = dict(sorted(sex.items(), key=lambda item: item[1], reverse=True))
+            hair = dict(zip(self.hairLabels, hairPredictions))
+            hair = dict(sorted(hair.items(), key=lambda item: item[1], reverse=True))
+            eyes = dict(zip(self.eyesLabels, eyesPredictions))
+            eyes = dict(sorted(eyes.items(), key=lambda item: item[1], reverse=True))
+            race = dict(zip(self.raceLabels, racePredictions))
+            race = dict(sorted(race.items(), key=lambda item: item[1], reverse=True))
+            height = self.heightCalc(heightPredictions)
+            weight = self.weightCalc(weightPredictions)
+            offense = dict(zip(self.offenseLabels, offensePredictions))
+
+            r, b = cv2.imencode('.jpg', resized)
+            image_base64 = base64.b64encode(r)
+
+            ret.append(Person(sex, hair, eyes, race, height, weight, offense, image_base64))
+
+        return ret
