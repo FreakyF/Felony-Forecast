@@ -2,6 +2,8 @@ import cv2
 import tensorflow as tf
 import numpy as np
 import base64
+# noinspection PyUnresolvedReferences
+from tensorflow.keras import backend as K
 
 
 class Person():
@@ -39,10 +41,6 @@ class Person():
     def getImage(self):
         return self.image
 
-    def toBase64(self, path):
-        with open(path, "rb") as image_file:
-            return base64.b64encode(image_file.read())
-
 
 class Model():
     def __init__(self):
@@ -54,15 +52,14 @@ class Model():
         self.raceModel = tf.keras.models.load_model('models/race.keras')
         self.heightModel = tf.keras.models.load_model('models/height.keras')
         self.weightModel = tf.keras.models.load_model('models/weight.keras')
-        self.offenseModel = tf.keras.models.load_model('models/offense.keras')
-
+        self.offenseModel = tf.keras.models.load_model('models/offense.keras', custom_objects={'f1_score': f1_score})
         self.sexLabels = ['Male', 'Female']
         self.hairLabels = ['Brown', 'Red', 'Gray', 'Black', 'Bald', 'Blonde']
         self.eyesLabels = ['Blue', 'Brown', 'Black', 'Hazel', 'Green']
         self.raceLabels = ['White', 'Black', 'Hispanic']
         self.heightCalc = lambda x: (x * 27.939999999999998) + 162.56
         self.weightCalc = lambda x: (x * 54.43000000000001) + 63.5
-        self.offenseLabels = ['BATTERY', 'BURGLARY', 'DUI', 'MANUF/DEL NARCOTICS', 'MURDER', 'None', 'POSS NARCOTICS',
+        self.offenseLabels = ['BATTERY', 'BURGLARY', 'DUI', 'MANUF/DEL NARCOTICS', 'MURDER', 'NONE', 'POSS NARCOTICS',
                               'ROBBERY', 'THEFT', 'UNLWFL POSS FIREARM']
 
     def analyzeImage(self, base64_provided_image):
@@ -116,9 +113,31 @@ class Model():
             weight = self.weightCalc(weightPredictions)
             offense = dict(zip(self.offenseLabels, offensePredictions))
 
-            r, b = cv2.imencode('.jpg', resized)
-            image_base64 = base64.b64encode(r)
+            sex_top = list(sex.keys())[0] if sex else None
+            hair_top = list(hair.keys())[0] if hair else None
+            eyes_top = list(eyes.keys())[0] if eyes else None
+            race_top = list(race.keys())[0] if race else None
 
-            ret.append(Person(sex, hair, eyes, race, height, weight, offense, image_base64))
+            success, encoded_image = cv2.imencode('.jpg', resized)
+            if not success:
+                continue
+            image_base64 = base64.b64encode(encoded_image).decode('utf-8')
+
+            ret.append(Person(sex_top, height, weight, hair_top, eyes_top, race_top, offense, image_base64))
 
         return ret
+
+
+def f1_score(y_true, y_pred):
+    y_pred = K.round(y_pred)
+
+    tp = K.sum(K.cast(y_true * y_pred, 'float'), axis=0)
+    fp = K.sum(K.cast((1 - y_true) * y_pred, 'float'), axis=0)
+    fn = K.sum(K.cast(y_true * (1 - y_pred), 'float'), axis=0)
+
+    precision = tp / (tp + fp + K.epsilon())
+    recall = tp / (tp + fn + K.epsilon())
+
+    f1 = 2 * (precision * recall) / (precision + recall + K.epsilon())
+
+    return K.mean(f1)

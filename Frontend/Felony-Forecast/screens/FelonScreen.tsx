@@ -20,15 +20,15 @@ export default function FelonScreen({route}: Readonly<{ route: any }>) {
 
     const fetchPersonData = () => {
         if (persons.length > 0) {
-            const currentPerson = persons[currentPersonIndex];
+            const currentPerson = JSON.parse(persons[currentPersonIndex]);
 
             const descriptionParts = [
                 `Race: ${currentPerson.race || 'Unknown'}`,
                 `Sex: ${currentPerson.sex || 'Unknown'}`,
                 `Hair: ${currentPerson.hair || 'Unknown'}`,
                 `Eyes: ${currentPerson.eyes || 'Unknown'}`,
-                `Weight: ${currentPerson.weight || 'Unknown'}`,
-                `Height: ${currentPerson.height || 'Unknown'}`
+                `Height: ${(currentPerson.height ? currentPerson.height.toFixed(2) : 'Unknown')} cm`,
+                `Weight: ${(currentPerson.weight ? currentPerson.weight.toFixed(2) : 'Unknown')} kg`
             ];
 
             const crimeList = Object.entries(currentPerson.offense).map(([crime, score]) => ({

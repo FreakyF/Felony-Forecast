@@ -60,6 +60,8 @@ export default function BottomAppBar({onNext, onPrevious}: Readonly<{ onNext: ()
                 image: base64Image,
             };
 
+            console.log(base64Image)
+
             const response = await sendToBackend('http://10.0.2.2:8000/receive_data', payload);
 
             if (response.success && response.data) {

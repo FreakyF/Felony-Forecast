@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
     },
     image: {
         flexShrink: 0,
-        width: 150,
-        height: 150,
+        width: 170,
+        height: 170,
         borderRadius: 28,
     },
 });

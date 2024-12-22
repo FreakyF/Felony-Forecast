@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexShrink: 0,
         width: '100%',
-        height: 171,
+        height: 191,
         paddingVertical: 8,
         paddingHorizontal: 16,
         gap: 24,
