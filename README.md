@@ -5,7 +5,7 @@ An experimental research platform and mobile interface designed to investigate t
 > **Research Disclaimer:** This is a strictly experimental Proof of Concept (PoC). The system is designed to highlight the challenges of biometric predictive modeling and the technical hurdles of dataset sanitization, rather than to provide actionable or deterministic classification.
 
 ## 📺 Demo & Visuals
-*Visual documentation of the biometric extraction and inference pipeline.*
+*Biometric Acquisition & Inference Workflow.*
 
 🚧 *Coming Soon*
 
