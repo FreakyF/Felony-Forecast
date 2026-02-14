@@ -28,7 +28,7 @@ An experimental research platform and mobile interface designed to investigate t
 ![Misclassification Hispanic](Docs/Screenshots/inference-error-ethnicity-misclassification-1.png)
 
 ![Misclassification Asian](Docs/Screenshots/inference-error-ethnicity-misclassification-2.png)
-*
+
 ## 🏗️ Architecture & Context
 *High-level system design and execution model.*
 
