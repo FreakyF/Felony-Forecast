@@ -4,25 +4,31 @@ An experimental research platform and mobile interface designed to investigate t
 
 > **Research Disclaimer:** This is a strictly experimental Proof of Concept (PoC). The system is designed to highlight the challenges of biometric predictive modeling and the technical hurdles of dataset sanitization, rather than to provide actionable or deterministic classification.
 
+## 📺 Demo & Visuals
+*Biometric Acquisition & Inference Workflow.*
+
 ### 🖥️ Interface & System State
-*Initial UI state awaiting video stream input.*
+*Initial UI state awaiting biometric input source selection.*
+
+* **System Initialization:**
 
 ![Dashboard](Docs/Screenshots/ui-initial-state.png)
 
 ### 🧪 Inference Bias & Error Analysis
+*Live demonstration of model performance, highlighting algorithmic hallucinations and dataset limitations.*
 
-#### Sample A: Feature Extraction Baseline (High-Risk Probability Artifact)
-![Baseline Features](Docs/Screenshots/inference-baseline-features.png)
+* **Baseline & Control Metrics:**
 
-#### Sample B: Demographic Misclassification (Type I Error / Lighting Noise)
-![Misclassification Hispanic](Docs/Screenshots/inference-error-ethnicity-misclassification-1.png)
-
-#### Sample C: Control Group Verification (Standard Variance)
 ![Control Group](Docs/Screenshots/inference-control-group.png)
 
-#### Sample D: Generalization Failure (Type II Error / Dataset Under-representation)
-![Misclassification Asian](Docs/Screenshots/inference-error-ethnicity-misclassification-2.png)
+![Baseline Features](Docs/Screenshots/inference-baseline-features.png)
 
+* **Detected Algorithmic Bias (Type I/II Errors):**
+
+![Misclassification Hispanic](Docs/Screenshots/inference-error-ethnicity-misclassification-1.png)
+
+![Misclassification Asian](Docs/Screenshots/inference-error-ethnicity-misclassification-2.png)
+*
 ## 🏗️ Architecture & Context
 *High-level system design and execution model.*
 
