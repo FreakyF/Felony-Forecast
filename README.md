@@ -4,26 +4,24 @@ An experimental research platform and mobile interface designed to investigate t
 
 > **Research Disclaimer:** This is a strictly experimental Proof of Concept (PoC). The system is designed to highlight the challenges of biometric predictive modeling and the technical hurdles of dataset sanitization, rather than to provide actionable or deterministic classification.
 
-### 🖥️ User Interface & State Management
-* **System Initialization:** ![Dashboard](Docs/Screenshots/ui-initial-state.png)
-  * *Context:* Clean UI architecture waiting for video stream input via React Native bridge.
+### 🖥️ Interface & System State
+*Initial UI state awaiting video stream input.*
 
-### 🧪 Model Inference & Error Analysis
+![Dashboard](Docs/Screenshots/ui-initial-state.png)
 
-* **Sample A: Feature Extraction Baseline:** ![Baseline](Docs/Screenshots/inference-baseline-features.png)
-  * *Result:* **Correct Feature Extraction.** The model successfully identifies facial landmarks and physical attributes.
-  * *Bias Note:* Despite neutral expression, the model assigns a high probabilistic risk score, demonstrating dataset imbalance against specific phenotypes.
+### 🧪 Inference Bias & Error Analysis
 
-* **Sample B: Demographic Misclassification (Type I Error):** ![Misclassification 1](Docs/Screenshots/inference-error-ethnicity-misclassification-1.png)
-  * *Result:* **Model Failure.** The system incorrectly classifies a Caucasian subject as "Hispanic".
-  * *Analysis:* This highlights the model's inability to distinguish skin tone nuances under artificial lighting, leading to false demographic labeling.
+#### Sample A: Feature Extraction Baseline (High-Risk Probability Artifact)
+![Baseline Features](Docs/Screenshots/inference-baseline-features.png)
 
-* **Sample C: Control Group Verification:** ![Control Group](Docs/Screenshots/inference-control-group.png)
-  * *Result:* **Stable Inference.** Standard detection of features within the majority demographic of the training set, used as a control sample for variance measuring.
+#### Sample B: Demographic Misclassification (Type I Error / Lighting Noise)
+![Misclassification Hispanic](Docs/Screenshots/inference-error-ethnicity-misclassification-1.png)
 
-* **Sample D: Generalization Failure (Type II Error):** ![Misclassification 2](Docs/Screenshots/inference-error-ethnicity-misclassification-2.png)
-  * *Result:* **Severe Classification Artifact.** The model fails to recognize Asian features, defaulting to "Hispanic" due to insufficient class representation in the training data.
-  * *Conclusion:* Proves that the model lacks the necessary variance to be used in a diverse, real-world environment.
+#### Sample C: Control Group Verification (Standard Variance)
+![Control Group](Docs/Screenshots/inference-control-group.png)
+
+#### Sample D: Generalization Failure (Type II Error / Dataset Under-representation)
+![Misclassification Asian](Docs/Screenshots/inference-error-ethnicity-misclassification-2.png)
 
 ## 🏗️ Architecture & Context
 *High-level system design and execution model.*
