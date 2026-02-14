@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Felony-Forecast",
-    "slug": "Felony-Forecast",
+    "name": "Neural-Injustice",
+    "slug": "Neural-Injustice",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -29,7 +29,6 @@
     "plugins": [
       "expo-router"
     ],
-    "experiments": {
-    }
+    "experiments": {}
   }
 }
